@@ -62,7 +62,8 @@ def main():
 
     print(f'\nList of {len(url_list)} URLs in {url}\n')
     for url_item in url_list:
-        print(urllib.parse.unquote(url))
+        print(urllib.parse.unquote(url_item.rstrip(
+            '>').rstrip('\'').rstrip(';').rstrip(')')))
     print(f'\nList of {len(email_list)} emails in {url}\n')
     for email in email_list:
         print(email)
