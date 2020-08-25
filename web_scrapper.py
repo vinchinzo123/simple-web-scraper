@@ -59,8 +59,9 @@ def main():
             email_list.extend(re.findall(email_pattern, x))
         if re.findall(phone_pattern, x):
             phone_list.extend(re.findall(phone_pattern, x))
+
     print(f'\nList of {len(url_list)} URLs in {url}\n')
-    for url in url_list:
+    for url_item in url_list:
         print(urllib.parse.unquote(url))
     print(f'\nList of {len(email_list)} emails in {url}\n')
     for email in email_list:
